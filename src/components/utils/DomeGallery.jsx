@@ -290,8 +290,6 @@ export default function DomeGallery({
         stopInertia();
 
         pointerTypeRef.current = event.pointerType || "mouse";
-        if (pointerTypeRef.current === "touch") event.preventDefault();
-        if (pointerTypeRef.current === "touch") lockScroll();
         draggingRef.current = true;
         cancelTapRef.current = false;
         movedRef.current = false;
@@ -314,10 +312,15 @@ export default function DomeGallery({
         )
           return;
 
-        if (pointerTypeRef.current === "touch") event.preventDefault();
-
         const dxTotal = event.clientX - startPosRef.current.x;
         const dyTotal = event.clientY - startPosRef.current.y;
+
+        if (
+          pointerTypeRef.current === "touch" &&
+          Math.abs(dxTotal) > Math.abs(dyTotal) * 1.2
+        ) {
+          event.preventDefault();
+        }
 
         if (!movedRef.current) {
           const dist2 = dxTotal * dxTotal + dyTotal * dyTotal;
@@ -784,7 +787,7 @@ export default function DomeGallery({
           ref={mainRef}
           className="absolute inset-0 grid place-items-center overflow-hidden select-none"
           style={{
-            touchAction: "none",
+            touchAction: "pan-y",
             WebkitUserSelect: "none",
             backgroundColor: `var(--overlay-blur-color, ${overlayBlurColor})`,
           }}
