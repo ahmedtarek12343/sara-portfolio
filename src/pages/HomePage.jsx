@@ -6,12 +6,10 @@ import { CustomEase } from "gsap/CustomEase";
 import DomeGallery from "../components/utils/DomeGallery";
 import Services from "../components/utils/Services";
 
-gsap.registerPlugin(SplitText, CustomEase);
-
 CustomEase.create("hop", "0.9,0,0.1,1");
 CustomEase.create("glide", "0.8,0,0.2,1");
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText, CustomEase, ScrollTrigger);
 const HomePage = () => {
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -207,7 +205,7 @@ const HomePage = () => {
         </h2>
       </div>
       <div className="absolute top-[200%] right-0 w-full h-screen bg-[#d0ae7e] p-4 text-primary">
-        <h2 className="text-[10vw] text-right leading-none font-bold uppercase sticky top-0">
+        <h2 className="text-[8vw] text-right leading-none font-bold uppercase sticky top-0">
           Let&apos;s create <br /> magic
         </h2>
       </div>
@@ -255,14 +253,15 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <div className="second-part flex justify-center items-center relative bg-secondary h-dvh z-5">
+      <div className="second-part flex justify-center items-center relative bg-secondary h-screen z-5">
         <h2 className="main-scroll-text text-[12vw] whitespace-nowrap text-primary font-bold uppercase">
           i dont take photos i craft experiences
         </h2>
       </div>
       <div style={{ width: "100vw", height: "150vh" }} className="globe-part">
-        <h2 className="globe-text text-8xl pb-20 font-bold text-center p-6">
-          Welcome to my world
+        <h2 className="globe-text leading-none text-[10vw] pb-20 font-bold text-center p-6">
+          Welcome to
+          <span className="whitespace-nowrap"> my world</span>
         </h2>
         <DomeGallery
           fit={0.8}

@@ -62,7 +62,7 @@ const Services = () => {
   });
 
   return (
-    <div className="relative services py-10 h-dvh overflow-hidden bg-[#886641] flex justify-center items-center">
+    <div className="relative services py-10 h-screen overflow-hidden bg-[#886641] flex justify-center items-center">
       <div className="services-overlay absolute perspective-midrange inset-0 w-full h-full bg-[#986c31] z-10 flex justify-center items-center">
         <h2 className="service-text transform-3d text-[clamp(2rem,5vw,3rem)] font-bold text-primary text-center px-4">
           What do i offer ?

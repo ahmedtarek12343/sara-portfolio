@@ -78,9 +78,7 @@ const Header = () => {
 
   return (
     <div ref={containerRef} className="relative z-60">
-      <div
-        className={`fixed p-6 bg-secondary text-primary top-0 right-0 h-dvh w-[min(100%,700px)] translate-x-full overflow-hidden ${isMenuOpen ? "pointer-events-auto" : "pointer-events-none"}`}
-      >
+      <div className="fixed p-6 bg-secondary text-primary top-0 right-0 h-dvh w-[min(100%,700px)] translate-x-full">
         {colorArr.map((color, i) => (
           <div
             key={i}
@@ -88,7 +86,7 @@ const Header = () => {
             style={{ backgroundColor: color }}
           ></div>
         ))}
-        <div className="navbar p-4 absolute inset-0 z-10 border-l-4 md:border-l-7 border-secondary">
+        <div className="navbar p-4 absolute inset-0 z-10 border-l-7 border-secondary">
           <div
             className="absolute inset-0"
             style={{
@@ -103,31 +101,21 @@ const Header = () => {
             />
           </div>
           <div className="relative z-20 h-full">
-            <ul className="absolute top-6 right-6 md:right-10 text-[clamp(28px,7vw,3rem)] font-semibold space-y-2">
+            <ul className="absolute top-4 right-10 text-[clamp(38px,7vw,3rem)]  font-semibold space-y-2">
               <li className="nav-item overflow-hidden">
-                <Link to="/" onClick={() => setIsMenuOpen(false)}>
-                  Home
-                </Link>
+                <Link to="/">Home</Link>
               </li>
               <li className="nav-item overflow-hidden">
-                <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-                  About
-                </Link>
+                <Link to="/about">About</Link>
               </li>
               <li className="nav-item overflow-hidden">
-                <Link to="/services" onClick={() => setIsMenuOpen(false)}>
-                  Services
-                </Link>
+                <Link to="/services">Services</Link>
               </li>
               <li className="nav-item overflow-hidden">
-                <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>
-                  Gallery
-                </Link>
+                <Link to="/gallery">Gallery</Link>
               </li>
               <li className="nav-item overflow-hidden">
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  Contact
-                </Link>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>

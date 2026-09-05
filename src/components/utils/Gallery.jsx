@@ -115,7 +115,7 @@ export default function Gallery() {
   }, [countGallery]);
 
   return (
-    <section className="relative gallery w-full px-14 py-10 h-dvh">
+    <section className="relative gallery w-full px-14 py-10 h-screen">
       <div className="flex justify-center flex-wrap container mx-auto px-5 w-full">
         {images.map((src, index) => (
           <div

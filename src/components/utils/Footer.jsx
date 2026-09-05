@@ -8,7 +8,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-12 border-b border-primary/20 pb-8 md:pb-12">
           {/* Brand */}
           <div className="max-w-sm">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-2 md:mb-3">Sara Isaac</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-2 md:mb-3">
+              Sara Isaac
+            </h2>
             <p className="text-primary/70 text-xs sm:text-sm leading-relaxed">
               Capturing people, places, and light — one frame at a time.
               Available for portrait, natural scene, and freelance sessions.
@@ -49,7 +51,7 @@ const Footer = () => {
           <h2 className="text-[10vw] md:text-[6vw] font-semibold text-center leading-none">
             Let's create something.
           </h2>
-          <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] relative my-2">
+          <div className="w-full h-[400px] sm:h-[350px] md:h-[500px] relative my-2">
             <Lanyard
               position={[0, 0, 24]}
               gravity={[0, -40, 0]}
@@ -76,4 +78,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
