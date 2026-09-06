@@ -82,6 +82,7 @@ const Header = () => {
         className="overlay bg-black/60 fixed inset-0"
         style={{
           opacity: isMenuOpen ? 1 : 0,
+          pointerEvents: isMenuOpen ? "auto" : "none",
           transition: "opacity 0.2s ease-in-out",
         }}
         onClick={() => setIsMenuOpen(false)}

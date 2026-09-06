@@ -55,10 +55,10 @@ const Footer = () => {
             <Lanyard
               position={[0, 0, 24]}
               gravity={[0, -40, 0]}
-              frontImage="/sara.jpg"
-              backImage="/sara.jpg"
+              frontImage="/opt/sm/sara.webp"
+              backImage="/opt/sm/sara.webp"
               imageFit="cover"
-              lanyardImage="/image-3.jpeg"
+              lanyardImage="/opt/sm/image-3.webp"
               lanyardWidth={0.2}
             ></Lanyard>
           </div>

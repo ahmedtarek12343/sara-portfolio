@@ -3,7 +3,7 @@ import { useGesture } from "@use-gesture/react";
 
 const DEFAULT_IMAGES = Array.from({ length: 40 }).map((item, index) => {
   return {
-    src: `/image-${index + 1}.jpeg`,
+    src: `/opt/sm/image-${index + 1}.webp`,
     alt: `image-${index + 1}`,
   };
 });

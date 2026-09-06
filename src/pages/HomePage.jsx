@@ -211,7 +211,7 @@ const HomePage = () => {
       </div>
       <div className="absolute top-[300%] right-0 w-full h-screen">
         <img
-          src="/image-5.jpeg"
+          src="/opt/lg/image-5.webp"
           alt=""
           className="w-full h-full object-cover"
         />
@@ -225,7 +225,11 @@ const HomePage = () => {
               className={`loader-img scale-0 absolute w-[250px] h-[250px] ${i === 4 ? "mid-img" : ""}`}
             >
               <img
-                src={`/image-${i + 1}.jpeg`}
+                src={
+                  i === 4
+                    ? `/opt/lg/image-${i + 1}.webp`
+                    : `/opt/sm/image-${i + 1}.webp`
+                }
                 alt=""
                 className="w-full h-full object-cover"
               />

@@ -6,7 +6,7 @@ import invert from "../../lib/util";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const images = Array.from({ length: 25 }, (_, i) => `/image-${i + 1}.jpeg`);
+const images = Array.from({ length: 25 }, (_, i) => `/opt/sm/image-${i + 1}.webp`);
 export const galleryData = [
   { color: "#1a2b3c", text: "City Lights" },
   { color: "#2d4a5e", text: "Old Streets" },
@@ -139,7 +139,7 @@ export default function Gallery() {
         <div className="mt-20 aspect-video w-full md:basis-[70%] overflow-hidden shadow-2xl border-white border-4 rounded-3xl">
           <img
             ref={mainImgRef}
-            src={`/image-${countGallery + 1}.jpeg`}
+            src={`/opt/lg/image-${countGallery + 1}.webp`}
             alt=""
             className="main-gallery-img h-full w-full object-cover"
           />
