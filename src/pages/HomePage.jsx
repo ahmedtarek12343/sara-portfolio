@@ -152,7 +152,7 @@ const HomePage = () => {
       end: "+=40%",
       scrub: 1,
       animation: gsap.from(split4.chars, {
-        y: 120,
+        y: 180,
         stagger: 0.1,
       }),
     });
@@ -216,7 +216,7 @@ const HomePage = () => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="first-part relative h-dvh overflow-hidden">
+      <div className="first-part relative h-screen overflow-hidden">
         {" "}
         <div className="loader-parent h-full w-full relative flex justify-center items-center">
           {Array.from({ length: 8 }).map((_, i) => (
@@ -234,7 +234,7 @@ const HomePage = () => {
           ))}
         </div>{" "}
         <div className="main-part p-6 md:p-12 font-semibold text-6xl absolute inset-0 h-full w-full bg-transparent">
-          <h1 className="main-text text-[140px] md:text-[15vw] uppercase text-primary leading-none hover:cursor-default">
+          <h1 className="main-text text-[100px] md:text-[15vw] uppercase text-primary leading-none hover:cursor-default">
             <span className="whitespace-nowrap">
               <span className="text-secondary">S</span>ara
             </span>{" "}
@@ -259,7 +259,7 @@ const HomePage = () => {
         </h2>
       </div>
       <div style={{ width: "100vw", height: "150vh" }} className="globe-part">
-        <h2 className="globe-text leading-none text-[10vw] pb-20 font-bold text-center p-6">
+        <h2 className="globe-text leading-[0.9] text-[10vw] pb-20 font-bold text-center p-6">
           Welcome to
           <span className="whitespace-nowrap"> my world</span>
         </h2>

@@ -40,8 +40,7 @@ const Header = () => {
           {
             yPercent: 100,
             ease: "hop",
-            duration: 1,
-            stagger: 0.1,
+            stagger: 0.15,
           },
           "-=0.45",
         );
@@ -78,6 +77,15 @@ const Header = () => {
 
   return (
     <div ref={containerRef} className="relative z-60">
+      {" "}
+      <div
+        className="overlay bg-black/60 fixed inset-0"
+        style={{
+          opacity: isMenuOpen ? 1 : 0,
+          transition: "opacity 0.2s ease-in-out",
+        }}
+        onClick={() => setIsMenuOpen(false)}
+      />
       <div className="fixed p-6 bg-secondary text-primary top-0 right-0 h-dvh w-[min(100%,700px)] translate-x-full">
         {colorArr.map((color, i) => (
           <div
@@ -86,20 +94,7 @@ const Header = () => {
             style={{ backgroundColor: color }}
           ></div>
         ))}
-        <div className="navbar p-4 absolute inset-0 z-10 border-l-7 border-secondary">
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: "polygon(0% 0%, 0% 100%, 100% 100%, 100% 75.25%)",
-              backgroundColor: "#000000",
-            }}
-          >
-            <img
-              src="/image-12.jpeg"
-              alt=""
-              className="w-[120%] h-[120%] object-cover object-[86%_100%]"
-            />
-          </div>
+        <div className="navbar p-4 absolute inset-0 z-10">
           <div className="relative z-20 h-full">
             <ul className="absolute top-4 right-10 text-[clamp(38px,7vw,3rem)]  font-semibold space-y-2">
               <li className="nav-item overflow-hidden">
@@ -118,10 +113,21 @@ const Header = () => {
                 <Link to="/contact">Contact</Link>
               </li>
             </ul>
+            <div className="absolute bottom-6 left-3">
+              <div className="flex flex-col gap-2 text-md">
+                <a
+                  href="https://www.instagram.com/saramisaac"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Instagram
+                </a>
+                <a href="mailto:saramisaac@hotmail.com">Email</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
       <div className="fixed bottom-5 right-5 flex items-center gap-4">
         <button
           ref={buttonRef}
